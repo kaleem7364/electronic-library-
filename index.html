@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المكتبة الإلكترونية المتكاملة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شريط الإشعار المتحرك -->
+    <div class="notification-bar">
+        <marquee behavior="scroll" direction="right">من إعداد الطالب: علاء الجدي - مشروع تخرج مكتبة إلكترونية متكاملة</marquee>
+    </div>
+
+    <!-- شريط التنقل الرئيسي -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>المكتبة الإلكترونية</span>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="ابحث عن كتاب، مؤلف، أو تصنيف...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <div class="search-results" id="search-results"></div>
+            </div>
+            
+            <div class="user-actions">
+                <button class="btn login-btn">تسجيل الدخول</button>
+                <button class="btn register-btn">إنشاء حساب</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <nav class="sidebar">
+        <ul>
+            <li class="active"><a href="#"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> جميع الكتب</a></li>
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-list"></i> التصنيفات <i class="fas fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">علوم الحاسوب</a></li>
+                    <li><a href="#">العلوم الطبيعية</a></li>
+                    <li><a href="#">الآداب واللغات</a></li>
+                    <li><a href="#">العلوم الإنسانية</a></li>
+                    <li><a href="#">العلوم الاجتماعية</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-download"></i> أحدث التنزيلات</a></li>
+            <li><a href="#"><i class="fas fa-star"></i> الأكثر تقييماً</a></li>
+            <li><a href="#"><i class="fas fa-upload"></i> رفع كتاب</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> عن المكتبة</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>أكبر مكتبة إلكترونية عربية</h1>
+                <p>تصفح أكثر من 10,000 كتاب في مختلف المجالات العلمية والأدبية</p>
+                <div class="hero-buttons">
+                    <button class="btn primary-btn">استكشف الكتب الآن</button>
+                    <button class="btn secondary-btn">كيفية الاستخدام</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- إحصائيات المكتبة -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <i class="fas fa-book"></i>
+                <h3>10,000+</h3>
+                <p>كتاب متاح</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h3>50,000+</h3>
+                <p>مستخدم مسجل</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-download"></i>
+                <h3>1M+</h3>
+                <p>تحميل</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>500+</h3>
+                <p>مؤلف</p>
+            </div>
+        </section>
+
+        <!-- أحدث الكتب -->
+        <section class="books-section">
+            <div class="section-header">
+                <h2>أحدث الكتب المضافة</h2>
+                <a href="#" class="view-all">عرض الكل <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+            <div class="books-grid">
+                <!-- كتاب 1 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://via.placeholder.com/200x300" alt="كتاب تعلم البرمجة">
+                        <div class="book-badge bestseller">الأكثر مبيعاً</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">تعلم البرمجة بلغة JavaScript</h3>
+                        <p class="book-author">أحمد محمد</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (120)</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn small-btn"><i class="fas fa-eye"></i> معاينة</button>
+                            <button class="btn small-btn primary-btn"><i class="fas fa-download"></i> تحميل</button>
+                        </div>
+                        <div class="book-formats">
+                            <span>متاح بصيغة:</span>
+                            <span class="format-badge pdf">PDF</span>
+                            <span class="format-badge epub">EPUB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- كتاب 2 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://via.placeholder.com/200x300" alt="كتاب الذكاء الاصطناعي">
+                        <div class="book-badge new">جديد</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">مدخل إلى الذكاء الاصطناعي</h3>
+                        <p class="book-author">د. سامي عبد الله</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (85)</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn small-btn"><i class="fas fa-eye"></i> معاينة</button>
+                            <button class="btn small-btn primary-btn"><i class="fas fa-download"></i> تحميل</button>
+                        </div>
+                        <div class="book-formats">
+                            <span>متاح بصيغة:</span>
+                            <span class="format-badge pdf">PDF</span>
+                            <span class="format-badge mobi">MOBI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- كتاب 3 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://via.placeholder.com/200x300" alt="كتاب تصميم الويب">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">تصميم واجهات المستخدم الحديثة</h3>
+                        <p class="book-author">ليلى أحمد</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (210)</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn small-btn"><i class="fas fa-eye"></i> معاينة</button>
+                            <button class="btn small-btn primary-btn"><i class="fas fa-download"></i> تحميل</button>
+                        </div>
+                        <div class="book-formats">
+                            <span>متاح بصيغة:</span>
+                            <span class="format-badge pdf">PDF</span>
+                            <span class="format-badge epub">EPUB</span>
+                            <span class="format-badge mobi">MOBI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- كتاب 4 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://via.placeholder.com/200x300" alt="كتاب علم البيانات">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">علم البيانات من البداية</h3>
+                        <p class="book-author">د. خالد سعيد</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (76)</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn small-btn"><i class="fas fa-eye"></i> معاينة</button>
+                            <button class="btn small-btn primary-btn"><i class="fas fa-download"></i> تحميل</button>
+                        </div>
+                        <div class="book-formats">
+                            <span>متاح بصيغة:</span>
+                            <span class="format-badge pdf">PDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- تصنيفات الكتب -->
+        <section class="categories-section">
+            <div class="section-header">
+                <h2>تصفح حسب التصنيف</h2>
+                <a href="#" class="view-all">عرض جميع التصنيفات <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>علوم الحاسوب</h3>
+                    <p>1,200 كتاب</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-atom"></i>
+                    <h3>العلوم الطبيعية</h3>
+                    <p>850 كتاب</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-book"></i>
+                    <h3>الآداب واللغات</h3>
+                    <p>2,300 كتاب</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>العلوم الإنسانية</h3>
+                    <p>1,700 كتاب</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-users"></i>
+                    <h3>العلوم الاجتماعية</h3>
+                    <p>1,100 كتاب</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>الإدارة والأعمال</h3>
+                    <p>950 كتاب</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- نموذج رفع كتاب جديد -->
+        <section class="upload-section">
+            <h2>هل لديك كتاب تريد مشاركته؟</h2>
+            <p>ساهم في إثراء المكتبة برفع الكتب المفيدة</p>
+            
+            <form class="upload-form" id="book-upload-form">
+                <div class="form-group">
+                    <label for="book-title">عنوان الكتاب</label>
+                    <input type="text" id="book-title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="book-author">اسم المؤلف</label>
+                    <input type="text" id="book-author" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="book-category">التصنيف</label>
+                    <select id="book-category" required>
+                        <option value="">اختر تصنيفاً</option>
+                        <option value="computer">علوم الحاسوب</option>
+                        <option value="science">العلوم الطبيعية</option>
+                        <option value="literature">الآداب واللغات</option>
+                        <option value="humanities">العلوم الإنسانية</option>
+                        <option value="social">العلوم الاجتماعية</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>صيغة الكتاب</label>
+                    <div class="format-options">
+                        <label><input type="checkbox" name="format" value="pdf"> PDF</label>
+                        <label><input type="checkbox" name="format" value="epub"> EPUB</label>
+                        <label><input type="checkbox" name="format" value="mobi"> MOBI</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="book-file">رفع ملف الكتاب</label>
+                    <input type="file" id="book-file" accept=".pdf,.epub,.mobi" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="book-cover">صورة الغلاف (اختياري)</label>
+                    <input type="file" id="book-cover" accept="image/*">
+                </div>
+                
+                <button type="submit" class="btn primary-btn">رفع الكتاب</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>عن المكتبة</h3>
+                <p>المكتبة الإلكترونية هي منصة عربية تهدف إلى توفير الكتب العلمية والأدبية بجودة عالية وبشكل مجاني.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">جميع الكتب</a></li>
+                    <li><a href="#">التصنيفات</a></li>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                    <li><a href="#">شروط الاستخدام</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section contact">
+                <h3>تواصل معنا</h3>
+                <p><i class="fas fa-envelope"></i> info@elibrary.com</p>
+                <p><i class="fas fa-phone"></i> +123456789</p>
+                <p><i class="fas fa-map-marker-alt"></i> المدينة، الدولة</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 المكتبة الإلكترونية. جميع الحقوق محفوظة | من إعداد الطالب: علاء الجدي</p>
+        </div>
+    </footer>
+
+    <!-- نافذة تسجيل الدخول -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>تسجيل الدخول</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">البريد الإلكتروني</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">كلمة المرور</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> تذكرني
+                    </label>
+                    <a href="#" class="forgot-password">نسيت كلمة المرور؟</a>
+                </div>
+                
+                <button type="submit" class="btn primary-btn">تسجيل الدخول</button>
+                
+                <div class="social-login">
+                    <p>أو سجل الدخول باستخدام:</p>
+                    <div class="social-buttons">
+                        <button class="btn facebook-btn"><i class="fab fa-facebook-f"></i> فيسبوك</button>
+                        <button class="btn google-btn"><i class="fab fa-google"></i> جوجل</button>
+                    </div>
+                </div>
+                
+                <p class="register-link">ليس لديك حساب؟ <a href="#" id="show-register">إنشاء حساب جديد</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة إنشاء حساب -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>إنشاء حساب جديد</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">الاسم الكامل</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email">البريد الإلكتروني</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password">كلمة المرور</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-confirm">تأكيد كلمة المرور</label>
+                    <input type="password" id="register-confirm" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" required> أوافق على <a href="#">شروط الاستخدام</a> و <a href="#">سياسة الخصوصية</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn primary-btn">إنشاء حساب</button>
+                
+                <p class="login-link">لديك حساب بالفعل؟ <a href="#" id="show-login">تسجيل الدخول</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
